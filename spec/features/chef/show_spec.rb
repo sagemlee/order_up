@@ -15,7 +15,7 @@ RSpec.describe "Chef Show Page" do
     @ingredient2 = DishIngredient.create(dish_id: @pasta.id, ingredient_id: @sauce.id)
     @ingredient3 = DishIngredient.create(dish_id: @pasta.id, ingredient_id: @dough.id)
 
-    visit "chef/#{chef1.id}"
+    visit "chef/#{@chef1.id}"
 
     expect(page).to have_content(@chef1.name)
     click_link "Ingredient this chef uses"
