@@ -8,4 +8,5 @@ class ChefsController < ApplicationController
 
   end
 
+
 end

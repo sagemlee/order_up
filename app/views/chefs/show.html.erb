@@ -1,2 +1,11 @@
 <%= @chef.name %>
+
+ <section id=top3>
+  <p>Chefs top 3 ingredients:</p>
+    <%#@chef.top_ingredients.each do |ingredient| %>
+      <%#=ingredient.name %>
+    <%# end  %> -->
+
+</section>
+
 <%= link_to "Ingredient this chef uses", "/chef/#{@chef.id}/ingredients" %>
