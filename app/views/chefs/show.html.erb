@@ -1,4 +1,2 @@
 <%= @chef.name %>
-<% @chef.unique_ingredients.each do |ingredient| %>
-  <%= ingredient %>
-<% end %>
+<%= link_to "Ingredient this chef uses", "/chef/#{@chef.id}/ingredients" %>
