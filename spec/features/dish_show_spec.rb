@@ -12,7 +12,7 @@ RSpec.describe "Dish Show Page" do
      DishIngredient.create(dish_id: pizza.id, ingredient_id: dough.id)
 
      visit "/dish/#{pizza.id}"
-
+     
      expect(page).to have_content(cheese.name)
      expect(page).to have_content(sauce.name)
      expect(page).to have_content(dough.name)

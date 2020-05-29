@@ -1,5 +1,6 @@
 class DishesController < ApplicationController
 
   def show
-  end 
+    @dish = Dish.find(params[:dish_id])
+  end
 end
