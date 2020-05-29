@@ -9,7 +9,7 @@ RSpec.describe Chef, type: :model do
   end
 
   describe "methods" do
-    it "unique_ingredients"
+    it "unique_ingredients" do
     @chef1 = Chef.create(name:"Bobbly Flay")
     @cheese = Ingredient.create(name:"cheese", calories: 120)
     @sauce = Ingredient.create(name:"sauce", calories: 40)
@@ -23,6 +23,7 @@ RSpec.describe Chef, type: :model do
     @ingredient2 = DishIngredient.create(dish_id: @pasta.id, ingredient_id: @sauce.id)
     @ingredient3 = DishIngredient.create(dish_id: @pasta.id, ingredient_id: @dough.id)
 
-    expect(chef1.unique_ingredients).to eq([@ingredient1, @ingredient2, @ingredient3])
+    expect(@chef1.unique_ingredients).to eq([@cheese, @sauce, @dough])
+  end
   end
 end
